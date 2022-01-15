@@ -1,0 +1,100 @@
+.container{
+  width: 600px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  height: 525px;
+  justify-content: space-between;
+}
+
+.formInputs{
+  display: flex;
+  flex-direction: column;
+}
+.formInputs div{
+  margin-bottom: 16px;
+}
+.formInputs label{
+  width: 150px;
+  display: inline-block;
+}
+
+.formInputs input{
+  all: unset;
+  width: 300px;
+  height: 32px;
+  background-color: #FFF;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: inline-block;
+  padding-inline: 8px;
+  box-sizing: border-box;
+}
+
+
+.formFooter{
+  display: flex;
+  align-self: flex-end;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.formFooter button{
+  all: unset;
+  width: 100px;
+  height: 32px;
+  background-color: turquoise;
+  text-align: center;
+  padding: 0px 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+}
+.formFooter button:first-child{
+  margin-inline-end: 16px;
+  border: solid 2px turquoise;
+  background-color: transparent;
+  color: teal;
+}
+
+.selectForm{
+  all: unset;
+  width: 300px;
+  height: 36px;
+  background-color: #FFF;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding-inline: 8px;
+  box-sizing: border-box;
+}
+
+.formContainer{
+width: 320px;
+height: 30px;
+position: relative;
+display: inline-block;
+}
+
+.formContainer::after{
+content: "▼";
+top: 8px;
+right: 24px;
+position: absolute;
+display: inline;
+color: #333;
+font-size: 12px;
+}
+
+.error{
+  color: red;
+  font-size: 14px;
+}
+
+
+sup{
+  color: red;
+}
