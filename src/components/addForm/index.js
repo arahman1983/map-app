@@ -21,7 +21,7 @@ export default function Form({ addBuilding, handleView }) {
     e.preventDefault();
     if(buildingName && location){
       setError(false)
-      addBuilding();
+      addBuilding({buildingName,...location});
       return
     }
     setError(true)

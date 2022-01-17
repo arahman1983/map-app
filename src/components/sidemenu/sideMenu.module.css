@@ -39,3 +39,25 @@
   background-color: #12b6a5;
   color: #FFF;
 }
+
+.NoData{
+  color: #ddd;
+  align-self: center;
+  margin-top: 32px;
+}
+.list ul{
+  padding: 0px;
+}
+.list li{
+  height: 36px;
+  padding:0px 8px;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list li:hover{
+  background-color: #ddd;
+}
