@@ -1,6 +1,6 @@
 import styles from './sideMenu.module.css'
 
-export default function SideMenu({handleAddBuilding, usersBuildings}) {
+export default function SideMenu({handleAddBuilding, usersBuildings, setSelectedBuilding}) {
   return(
     <div className={styles.container}>
       <div className={styles.header}>
@@ -12,7 +12,7 @@ export default function SideMenu({handleAddBuilding, usersBuildings}) {
           <ul>
             {
               usersBuildings.map((uB,i) => (
-                <li key={i}>{uB.buildingName}</li>
+                <li key={i} onClick={(e) => setSelectedBuilding(uB)}>{uB.buildingName}</li>
               ))
             }
           </ul>

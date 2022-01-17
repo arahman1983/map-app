@@ -60,6 +60,7 @@ function App() {
   const [selectedUser, setSelectedUser] = useState("")
   const [buildings, setBuildings] = useState([]);
   const [usersBuildings, setUsersBuildings] = useState([])
+  const [selectedBuilding, setSelectedBuilding] = useState()
 
   const saveDataLocal = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value))
@@ -106,6 +107,7 @@ function App() {
     }
     setView(true);
   };
+
   const handleCancel = () => {
     setView(true);
   };
@@ -113,13 +115,13 @@ function App() {
   return (
     <div className={styles.App}>
       <div className={styles.sideMenu}>
-        <SideMenu handleAddBuilding={() => setView(false)} usersBuildings={usersBuildings}/>
+        <SideMenu handleAddBuilding={() => setView(false)} usersBuildings={usersBuildings} setSelectedBuilding={setSelectedBuilding} />
       </div>
       <div className={styles.container}>
         <div className={styles.header}>
           <UsersSelect users={users} selectedUser={selectedUser} setSelectedUser={handleUserSelect}/>
         </div>
-        {view ? <MapWrapper /> : <Form addBuilding={addBuilding} handleView={handleCancel} />}
+        {view ? <MapWrapper building={selectedBuilding} /> : <Form addBuilding={addBuilding} handleView={handleCancel} />}
       </div>
     </div>
   );
